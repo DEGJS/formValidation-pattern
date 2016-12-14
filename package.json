@@ -30,7 +30,7 @@
         "directories": {
             "lib": "src"
         },
-        "dependencies": {
+        "peerDependencies": {
             "DEGJS/formValidation": "github:DEGJS/formValidation@^0.0.1"
         }
     }
