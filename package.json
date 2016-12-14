@@ -1,0 +1,37 @@
+{
+    "name": "formValidation-pattern",
+    "version": "0.0.1",
+    "description": "A pattern rule for the DEGJS formValidation module.",
+    "keywords": [
+        "DEGJS",
+        "formValidation"
+    ],
+    "author": {
+        "name": "Aaron Ladage",
+        "email": "aladage@degdigital.com",
+        "url": "http://aaronladage.com"
+    },
+    "contributors": [
+        {
+            "name": "Ryan Heap",
+            "email": "rheap@degdigital.com"
+        }
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DEGJS/formValidation-pattern.git"
+    },
+    "bugs": "https://github.com/DEGJS/formValidation-pattern/issues",
+    "jspm": {
+        "registry": "jspm",
+        "format": "es6",
+        "main": "pattern.js",
+        "directories": {
+            "lib": "src"
+        },
+        "dependencies": {
+            "DEGJS/formValidation": "github:DEGJS/formValidation@^0.0.1"
+        }
+    }
+}
