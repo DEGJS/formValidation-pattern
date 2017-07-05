@@ -76,7 +76,7 @@ The default message displayed when a field fails this rule's validation test.
 
 #### options.messageAttr
 Type: `String`  
-Default: `data-validation-required-message`  
+Default: `data-validation-pattern-message`  
 The data attribute formValidation will check when determining [message hierarchy](https://github.com/DEGJS/formValidation#configuring-error-messages)
 
 #### options.events
