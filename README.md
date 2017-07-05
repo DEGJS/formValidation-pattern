@@ -71,7 +71,7 @@ Sample Markup:
 
 #### options.message
 Type: `String`  
-Default: `This field is required.`  
+Default: `Please match the field format.`  
 The default message displayed when a field fails this rule's validation test.
 
 #### options.messageAttr
