@@ -20,7 +20,7 @@ After importing, formValidation rule modules can be instantiated by passing an a
 ```js
 import formValidation from "DEGJS/formValidation";
 
-/* Import the Required rule module */
+/* Import the Pattern rule module */
 import pattern from "DEGJS/formValidation-pattern";
 
 let validationOptions = {
