@@ -1,62 +1,53 @@
-let pattern = function() {
+const pattern = (options) => {
 
-	let messages = {
-			patternMismatchMsg: {
-				attribute: 'data-validation-pattern-message',
-				message: 'Please match the field format.'
-			}
-		},
-		events = [
-			'focusout',
-			'submit'
-		];
+    const defaults = {
+        message: 'Please match the field format.',
+        messageAttr: 'data-validation-pattern-message',
+        events: [
+            'focusout',
+            'submit'
+        ]
+    };
+    let settings = Object.assign({}, defaults, options);
 
-	function getEvents() {
-		return events;
-	};
+    const getSettings = () => {
+        return settings;
+    }
 
-	function isRelevant(containerEl, inputEls) {
-		return inputEls.every(function(el) {
-			return el.getAttribute('pattern') !== null;
-		});
-	};
+    const isRelevant = (field) => {
+        return field.inputEls.some(el => el.getAttribute('pattern') !== null);
+    }
 
-	function validate(matchingField) {
-		return new Promise(function(resolve, reject) {
-			let inputEls = matchingField.inputEls;
-			if ((inputEls) && (inputEls.length > 0)) {
-				let input = inputEls[0],
-					pattern = new RegExp(input.getAttribute('pattern'));
-				if((input.value) && (input.value.length > 0)) {
-					if (pattern.test(input.value)) {
-						resolve({
-							valid: true
-						});
-					} else {
-						resolve({
-							valid: false,
-							message: messages.patternMismatchMsg,
-							matchingField: matchingField
-						});
-					}
-				} else {
-					resolve({
-						valid: true
-					});
-				}
-			} else {
-				reject('no inputs');
-			}
-			
-		});
-	};
+    const validate = (field) => {
+        return new Promise(function(resolve, reject) {
+            if (field.inputEls) {
+                resolve({
+					valid: field.inputEls.some(el => {
+						const pattern = new RegExp(el.getAttribute('pattern'));
+						return el.value.length > 0 && pattern.test(el.value);
+					})
+                });
+            } else {
+                reject('required: No inputs set.');
+            }
+        });
+    }
 
-	return {
-		events: getEvents,
-		isRelevant: isRelevant,
-		validate: validate
-	}
+    const postprocessMessage = (msg) => {
+        if (settings.postprocessMessage && typeof settings.postprocessMessage === 'function') {
+            return settings.postprocessMessage(msg);
+        } else {
+            return msg;
+        }
+    }
 
-};
+    return {
+        settings: getSettings(),
+        isRelevant: isRelevant,
+        validate: validate,
+        postprocessMessage: postprocessMessage
+    };
+
+}
 
 export default pattern;

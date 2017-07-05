@@ -1,6 +1,6 @@
 {
     "name": "formValidation-pattern",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "A pattern rule for the DEGJS formValidation module.",
     "keywords": [
         "DEGJS",
@@ -31,7 +31,7 @@
             "lib": "src"
         },
         "peerDependencies": {
-            "DEGJS/formValidation": "github:DEGJS/formValidation@^0.0.1"
+            "DEGJS/formValidation": "github:DEGJS/formValidation@^1.0.0"
         }
     }
 }
