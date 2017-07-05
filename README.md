@@ -59,7 +59,7 @@ Sample Markup:
     <fieldset>
         <div class="js-validation-field" data-validation-pattern-message="This message will override both the default rule message and the form element message.">
             <label for="country">Three-letter Country Code</label>
-            <input class="js-field-input" type="text" pattern="[A-Za-z]{3}" id="country" name="country">
+            <input type="text" pattern="[A-Za-z]{3}" id="country" name="country">
         </div>
         <button type="submit">Submit</button>
     </fieldset>
