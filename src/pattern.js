@@ -24,7 +24,7 @@ const pattern = (options) => {
                 resolve({
 					valid: field.inputEls.some(el => {
 						const pattern = new RegExp(el.getAttribute('pattern'));
-						return el.value.length > 0 && pattern.test(el.value);
+						return el.value.length === 0 || (el.value.length > 0 && pattern.test(el.value));
 					})
                 });
             } else {
