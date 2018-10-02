@@ -1,14 +1,16 @@
 # formValidation-pattern
+[![Build Status](https://travis-ci.com/DEGJS/formValidation-pattern.svg?branch=master)](https://travis-ci.com/DEGJS/formValidation-pattern)
+
 A pattern rule module for the DEGJS [formValidation](https://github.com/DEGJS/formValidation) module.
 
 
 ## Install
-formValidation-pattern is an ES6 module. Consequently, you'll need an ES6 transpiler ([Babel](https://babeljs.io) is a nice one) and a module loader ([SystemJS](https://github.com/systemjs/systemjs) will do the job) as part of your Javascript workflow.
+formValidation-pattern is an ES6 module. Consequently, you'll need an ES6 transpiler ([Babel](https://babeljs.io) is a nice one) as part of your Javascript workflow.
 
-If you're already using [JSPM package manager](http://jspm.io) for your project, you can install formValidation-pattern with the following command:
+If you're already using NPM for your project, you can install formValidation-pattern with the following command:
 
 ```
-$ jspm install github:DEGJS/formValidation-pattern
+$ npm install @degjs/form-validation-pattern
 ```
 
 Installing formValidation rule modules via JSPM will automatically install the base formValidation module.
@@ -18,10 +20,10 @@ Installing formValidation rule modules via JSPM will automatically install the b
 After importing, formValidation rule modules can be instantiated by passing an array of names into a formValidation options object:
 
 ```js
-import formValidation from "DEGJS/formValidation";
+import formValidation from "@degjs/form-validation";
 
 /* Import the Pattern rule module */
-import pattern from "DEGJS/formValidation-pattern";
+import pattern from "@degjs/form-validation-pattern";
 
 let validationOptions = {
     rules: [
