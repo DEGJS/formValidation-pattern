@@ -28,7 +28,7 @@
     "files": [
         "src"
     ],
-    "main": "src/required.js",
+    "main": "src/pattern.js",
     "publishConfig": {
         "access": "public"
     },
