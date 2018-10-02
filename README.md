@@ -13,8 +13,6 @@ If you're already using NPM for your project, you can install formValidation-pat
 $ npm install @degjs/form-validation-pattern
 ```
 
-Installing formValidation rule modules via JSPM will automatically install the base formValidation module.
-
 
 ## Usage
 After importing, formValidation rule modules can be instantiated by passing an array of names into a formValidation options object:
