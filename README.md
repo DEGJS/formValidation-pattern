@@ -23,20 +23,20 @@ import formValidation from "@degjs/form-validation";
 /* Import the Pattern rule module */
 import pattern from "@degjs/form-validation-pattern";
 
-let validationOptions = {
+const validationOptions = {
     rules: [
         pattern
     ]
 };
 
 /* Instantiate the formValidation module on an element */
-let formElement = document.querySelector('.form');
-let validationInst = formValidation(formElement, validationOptions);
+const formElement = document.querySelector('.form');
+const validationInst = formValidation(formElement, validationOptions);
 ```
 
 Optionally, default rule settings can be overridden by instantiating the rule as a function and passing options as an object: 
 ```js
-let validationOptions = {
+const validationOptions = {
     rules: [
         pattern({
         	message: 'This message will override the default rule message.',
