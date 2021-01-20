@@ -41,9 +41,8 @@
     "devDependencies": {
         "@babel/core": "^7.1.2",
         "@babel/preset-env": "^7.1.0",
-        "babel-core": "^7.0.0-bridge.0",
-        "babel-jest": "^23.6.0",
-        "jest": "^23.6.0"
+        "babel-jest": "^26.6.3",
+        "jest": "^26.6.3"
     },
     "jest": {
         "testPathIgnorePatterns": [
@@ -52,7 +51,14 @@
     },
     "babel": {
         "presets": [
-            "@babel/preset-env"
+            [
+                "@babel/preset-env", 
+                {
+                    "targets": {
+                        "node": "current"
+                    }
+                }
+            ]
         ]
     }
 }

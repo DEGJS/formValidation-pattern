@@ -1,5 +1,5 @@
 # formValidation-pattern
-[![Build Status](https://travis-ci.com/DEGJS/formValidation-pattern.svg?branch=master)](https://travis-ci.com/DEGJS/formValidation-pattern)
+![Run Tests](https://github.com/DEGJS/formValidation-pattern/workflows/Run%20Tests/badge.svg)
 
 A pattern rule module for the DEGJS [formValidation](https://github.com/DEGJS/formValidation) module.
 
