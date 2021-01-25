@@ -1,6 +1,6 @@
 {
     "name": "@degjs/form-validation-pattern",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "A pattern rule for the DEGJS formValidation module.",
     "keywords": [
         "DEGJS",
